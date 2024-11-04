@@ -1,0 +1,73 @@
+/* Estilos para o corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #4e54c8, #8f94fb);
+    color: #333;
+  }
+  
+  /* Estilo para o container */
+  .container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+  
+  /* Estilo do título */
+  .container h1 {
+    font-size: 55px;
+    color: #4e54c8;
+    margin-bottom: 10px;
+  }
+  
+  /* Estilo da mensagem */
+  .container p {
+    font-size: 40px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  /* Estilo para o rodapé */
+  footer {
+    position: absolute;
+    bottom: 10px;
+    font-size: 12px;
+    color: #eee;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Estilos responsivos para smartphones */
+  @media (max-width: 600px) {
+    body {
+      padding: 0;
+      font-size: 40px;
+    }
+  
+    .container {
+      padding: 5px;
+      width: 95%;
+    }
+  
+    .container h1 {
+      font-size: 30px;
+    }
+  
+    .container p {
+      font-size: 90px;
+    }
+  
+    footer {
+      font-size: 11px;
+      padding-bottom: 10px;
+    }
+  }
+  
