@@ -38,8 +38,10 @@
         const ref = database.ref("Medidas/Corrente"); // Somente o caminho relativo
         ref.on("value", (snapshot) => {
           const data = snapshot.val();
-          document.getElementById("mensagem").innerText = data
-            ? data + "A"
+          const valorFormatado =
+            typeof data === "number" ? data.toFixed(2) : data; // Limita a 2 casas decimais se for número
+          document.getElementById("mensagem").innerText = valorFormatado
+            ? valorFormatado + "A"
             : "Sem dados disponíveis";
         });
       }
