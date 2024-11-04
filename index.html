@@ -27,7 +27,7 @@
 
       // Função para buscar dados do Firebase
       function buscarDados() {
-        const ref = database.ref("caminho_do_seu_dado"); // Atualize com o caminho dos dados no Firebase
+        const ref = database.ref("Medidas/Corrente"); // Atualize com o caminho dos dados no Firebase
         ref.on("value", (snapshot) => {
           const data = snapshot.val();
           document.getElementById("mensagem").innerText = data
