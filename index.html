@@ -10,6 +10,32 @@
     <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-compat.js"></script>
   </head>
   <body>
+    <div id="sidebar" class="sidebar">
+      <button class="fechar-btn" onclick="fecharMenu()">×</button>
+      <h2>Menu</h2>
+      <ul>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/guilherme-roque-almeida"
+            target="_blank"
+            >Guilherme Roque</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/jo%C3%A3o-vitor-dos-santos-padilha-968985237/"
+            target="_blank"
+            >João Padilha</a
+          >
+        </li>
+        <li>
+          <a href="https://github.com/HalversonH/microsite" target="_blank"
+            >GitHub</a
+          >
+        </li>
+      </ul>
+    </div>
+
     <div class="container">
       <h1>Bem-vindo ao 2º ANDAR</h1>
       <p id="mensagem">Carregando dados...</p>
@@ -45,9 +71,19 @@
             : "Sem dados disponíveis";
         });
       }
+      function abrirMenu() {
+        document.getElementById("sidebar").style.left = "0";
+      }
 
+      // Função para fechar a barra lateral
+      function fecharMenu() {
+        document.getElementById("sidebar").style.left = "-250px";
+      }
       // Chama a função buscarDados
       buscarDados();
     </script>
+    <button id="abrir-btn" onclick="abrirMenu()">☰ Menu</button>
+
+    <!-- Barra lateral -->
   </body>
 </html>

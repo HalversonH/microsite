@@ -70,4 +70,69 @@ body {
       padding-bottom: 10px;
     }
   }
+
+/* Botão de abrir a barra lateral */
+
+  /* Estilo da barra lateral */
+  .sidebar {
+    height: 100%;
+    width: 250px;
+    position: absolute;
+    top: 0;
+    left: -250px; /* Oculta a barra fora da tela */
+    background-color: #333;
+    color: white;
+    transition: 0.3s; /* Animação suave para abrir e fechar */
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 1;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  }
+  #abrir-btn {
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+    position: absolute;
+    cursor:auto;
+    margin-right: 80%;
+  margin-bottom: 200%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    z-index: 0;
+  }
+  
+  /* Botão de fechar dentro da barra */
+  .fechar-btn {
+    font-size: 24px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  /* Estilo dos links de navegação */
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 20px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 8px 20px;
+    transition: background 0.3s;
+  }
+  
+  .sidebar ul li a:hover {
+    background-color: #4e54c8;
+  }
   
