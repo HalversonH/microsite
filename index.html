@@ -1,5 +1,44 @@
 <!DOCTYPE html>
-<head></head>
-<body>
-  <p>oi</p>
-</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Meu Site com Firebase</title>
+    <!-- Adicione os scripts Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-database.js"></script>
+  </head>
+  <body>
+    <p id="mensagem">Carregando dados...</p>
+
+    <script>
+      // Configurações do Firebase (copie as suas aqui)
+      const firebaseConfig = {
+        apiKey: "SUA_API_KEY",
+        authDomain: "SEU_AUTH_DOMAIN",
+        databaseURL: "SUA_DATABASE_URL",
+        projectId: "SEU_PROJECT_ID",
+        storageBucket: "SEU_STORAGE_BUCKET",
+        messagingSenderId: "SEU_MESSAGING_SENDER_ID",
+        appId: "SEU_APP_ID",
+      };
+
+      // Inicializa o Firebase
+      const app = firebase.initializeApp(firebaseConfig);
+      const database = firebase.database(app);
+
+      // Função para buscar dados do Firebase
+      function buscarDados() {
+        const ref = database.ref("caminho_do_seu_dado"); // Atualize com o caminho dos dados no Firebase
+        ref.on("value", (snapshot) => {
+          const data = snapshot.val();
+          document.getElementById("mensagem").innerText = data
+            ? data
+            : "Sem dados disponíveis";
+        });
+      }
+
+      // Chama a função buscarDados
+      buscarDados();
+    </script>
+  </body>
+</html>
